@@ -2291,11 +2291,12 @@ class PlayState extends MusicBeatState
 						{
 							case 0:
 								animToPlay = 'singLEFT';
+								health:-- 0.02;
 							case 1:
 								animToPlay = 'singDOWN';
-							case 2:
+							case 2:health:-- 0.02;
 								animToPlay = 'singUP';
-							case 3:
+							case 3:health:-- 0.02;
 								animToPlay = 'singRIGHT';
 						}
 						if(daNote.noteType == 'GF Sing') {
