@@ -9,7 +9,7 @@
 			"fps": 24,
 			"anim": "miss",
 			"indices": [],
-			"name": "sans Miss instance"
+			"name": "Miss instance"
 		},
 		{
 			"offsets": [
@@ -20,7 +20,7 @@
 			"fps": 24,
 			"anim": "singLEFT",
 			"indices": [],
-			"name": "sans Left instance"
+			"name": "Left instance"
 		},
 		{
 			"offsets": [
@@ -31,7 +31,7 @@
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "sans Right instance"
+			"name": "Right instance"
 		},
 		{
 			"offsets": [
@@ -42,7 +42,7 @@
 			"fps": 24,
 			"anim": "singDOWN",
 			"indices": [],
-			"name": "sans Down instance"
+			"name": "Down instance"
 		},
 		{
 			"offsets": [
@@ -53,7 +53,7 @@
 			"fps": 24,
 			"anim": "singUP",
 			"indices": [],
-			"name": "sans Up instance"
+			"name": "Up instance"
 		},
 		{
 			"offsets": [
@@ -64,7 +64,7 @@
 			"fps": 24,
 			"anim": "idle",
 			"indices": [],
-			"name": "sans FNF instance"
+			"name": "FNF instance"
 		}
 	],
 	"no_antialiasing": false,
