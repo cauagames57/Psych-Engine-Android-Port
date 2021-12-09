@@ -78,7 +78,7 @@ class PlayState extends MusicBeatState
 		['Good', 0.8], //From 70% to 79%
 		['Great', 0.9], //From 80% to 89%
 		['Sick!', 1], //From 90% to 99%
-		['Perfect!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['Template', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	#if (haxe >= "4.0.0")
@@ -176,6 +176,7 @@ class PlayState extends MusicBeatState
 
 	var botplaySine:Float = 0;
 	var botplayTxt:FlxText;
+	var creditTxt:FlxText;
 
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
@@ -320,20 +321,6 @@ class PlayState extends MusicBeatState
 		trace('stage is: ' + curStage);
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
-			
-			GameOverSubstate.resetVariables();
-		var songName:String = Paths.formatToSongPath(SONG.song);
-		curStage = PlayState.SONG.stage;
-		trace('stage is: ' + curStage);
-		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
-			switch (songName)
-			
-			GameOverSubstate.resetVariables();
-		var songName:String = Paths.formatToSongPath(SONG.song);
-		curStage = PlayState.SONG.stage;
-		trace('stage is: ' + curStage);
-		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
-			switch (songName)
 			{
 				case 'spookeez' | 'south' | 'monster':
 					curStage = 'spooky';
@@ -390,7 +377,6 @@ class PlayState extends MusicBeatState
 				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 				stageFront.updateHitbox();
 				add(stageFront);
-			
 
 				if(!ClientPrefs.lowQuality) {
 					var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
@@ -408,8 +394,8 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
-               
-            case 'template': //Week 1
+			
+			case 'template': //Week 1
 				var bg:BGSprite = new BGSprite('template', -600, -200, 0.9, 0.9);
 				add(bg);
 			
@@ -428,7 +414,7 @@ class PlayState extends MusicBeatState
 			case 'template4': //Week 1
 				var bg:BGSprite = new BGSprite('template4', -600, -200, 0.9, 0.9);
 				add(bg);
-				
+
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -935,29 +921,20 @@ class PlayState extends MusicBeatState
 		iconP2.visible = !ClientPrefs.hideHud;
 		add(iconP2);
 		reloadHealthBarColors();
-		
-		var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by Kauã"), 24);
-        creditTxt.scrollFactor.set();
-        creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        creditTxt.borderColor = FlxColor.BLACK;
-        creditTxt.borderSize = 3;
-        creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
-        add(creditTxt);
-        
-        var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by (Kauãシ) "), 24);
-        creditTxt.scrollFactor.set();
-        creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-        creditTxt.borderColor = FlxColor.BLACK;
-        creditTxt.borderSize = 3;
-        creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
-        add(creditTxt);
-        
+
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
+
+		creditTxt = new FlxText(876, 620, 348);
+        creditTxt.text = 'Ported by\nDxgamer';
+        creditTxt.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT);
+        creditTxt.setBorderStyle(OUTLINE, FlxColor.BLACK, 3, 1);       
+        creditTxt.scrollFactor.set();
+        add(creditTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -2334,12 +2311,11 @@ class PlayState extends MusicBeatState
 						{
 							case 0:
 								animToPlay = 'singLEFT';
-								health:-- 0.02;
 							case 1:
 								animToPlay = 'singDOWN';
-							case 2:health:-- 0.02;
+							case 2:
 								animToPlay = 'singUP';
-							case 3:health:-- 0.02;
+							case 3:
 								animToPlay = 'singRIGHT';
 						}
 						if(daNote.noteType == 'GF Sing') {
