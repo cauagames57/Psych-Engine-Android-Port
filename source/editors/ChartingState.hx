@@ -58,6 +58,7 @@ class ChartingState extends MusicBeatState
 		'Hey!',
 		'Hurt Note',
 		'Bullet_Note',
+		'Blue Bone Note',
 		'GF Sing',
 		'No Animation'
 	];
