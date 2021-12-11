@@ -1,0 +1,48 @@
+{
+	"storyName": "Indie Cross",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"weekCharacters": [
+		"trio",
+		"bf",
+		""
+	],
+	"songs": [
+		[
+			"Snake Eyes",
+			"cup",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Sansational",
+			"sans",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Last Reel",
+			"bendy",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"weekName": "Indie Cross"
+}
