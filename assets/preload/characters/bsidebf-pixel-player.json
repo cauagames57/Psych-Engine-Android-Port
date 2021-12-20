@@ -3,7 +3,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				2,
+				-158,
 				0
 			],
 			"fps": 24,
@@ -14,7 +14,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
+				-160,
 				0
 			],
 			"anim": "singUPmiss",
@@ -25,7 +25,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
+				-160,
 				0
 			],
 			"anim": "singUP",
@@ -36,7 +36,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
+				-160,
 				0
 			],
 			"anim": "singDOWN",
@@ -47,7 +47,7 @@
 		{
 			"loop": false,
 			"offsets": [
-				0,
+				-160,
 				0
 			],
 			"anim": "singDOWNmiss",
@@ -56,65 +56,65 @@
 			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-160,
 				0
 			],
+			"loop": false,
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "BF RIGHT NOTE",
-			"indices": []
+			"indices": [],
+			"name": "BF LEFT NOTE"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				-160,
 				0
 			],
-			"anim": "singRIGHTmiss",
-			"fps": 24,
-			"name": "BF LEFT MISS",
-			"indices": []
-		},
-		{
 			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
-			"anim": "singLEFTmiss",
-			"fps": 24,
-			"name": "BF RIGHT MISS",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				0,
-				0
-			],
 			"fps": 24,
 			"anim": "singRIGHT",
 			"indices": [],
-			"name": "BF LEFT NOTE"
+			"name": "BF RIGHT NOTE"
+		},
+		{
+			"offsets": [
+				-160,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BF RIGHT MISS"
+		},
+		{
+			"offsets": [
+				-160,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BF LEFT MISS"
 		}
 	],
 	"no_antialiasing": true,
-	"image": "characters/bfPixel",
+	"image": "characters/B-SidebfPixel",
 	"position": [
 		80,
 		480
 	],
-	"healthicon": "bf-pixel",
+	"healthicon": "bsidebf-pixel",
 	"flip_x": true,
 	"healthbar_colors": [
-		123,
-		214,
+		243,
+		104,
 		246
 	],
 	"camera_position": [
-		-260,
+		200,
 		-170
 	],
 	"sing_duration": 4,

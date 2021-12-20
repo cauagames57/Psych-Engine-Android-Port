@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				-250
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bob_RIGHT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				12,
+				-250
+			],
+			"anim": "singLEFT-loop",
+			"fps": 24,
+			"name": "bob_RIGHT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-250
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bob_DOWN",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				13,
+				-250
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bob_UP",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				12,
+				-249
+			],
+			"anim": "singUP-loop",
+			"fps": 24,
+			"name": "bob_UP",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				-253
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bob_LEFT",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				10,
+				-253
+			],
+			"anim": "singRIGHT-loop",
+			"fps": 24,
+			"name": "bob_LEFT",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				10,
+				-250
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "bob_idle",
+			"indices": []
+		},
+		{
+			"loop": true,
+			"offsets": [
+				10,
+				-250
+			],
+			"anim": "idle-loop",
+			"fps": 24,
+			"name": "bob_idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bob/angrybob_asset",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "angrybob",
+	"flip_x": true,
+	"healthbar_colors": [
+		235,
+		215,
+		255
+	],
+	"camera_position": [
+		-20,
+		250
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

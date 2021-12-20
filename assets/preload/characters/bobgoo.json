@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				11,
+				-250
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "bob_RIGHT"
+		},
+		{
+			"offsets": [
+				12,
+				-250
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singLEFT-loop",
+			"indices": [],
+			"name": "bob_RIGHT"
+		},
+		{
+			"offsets": [
+				10,
+				-250
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "bob_DOWN"
+		},
+		{
+			"offsets": [
+				13,
+				-260
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "bob_UP"
+		},
+		{
+			"offsets": [
+				12,
+				-259
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singUP-loop",
+			"indices": [],
+			"name": "bob_UP"
+		},
+		{
+			"offsets": [
+				7,
+				-253
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "bob_LEFT"
+		},
+		{
+			"offsets": [
+				10,
+				-253
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "singRIGHT-loop",
+			"indices": [],
+			"name": "bob_LEFT"
+		},
+		{
+			"offsets": [
+				10,
+				-250
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "bob_idle"
+		},
+		{
+			"offsets": [
+				10,
+				-250
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle-loop",
+			"indices": [],
+			"name": "bob_idle"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/bob/oohscary",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "bobgoo",
+	"flip_x": false,
+	"healthbar_colors": [
+		135,
+		142,
+		155
+	],
+	"camera_position": [
+		-20,
+		250
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
