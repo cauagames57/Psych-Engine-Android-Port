@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Menu_Cassete_girl.png">
+	<!-- Created with Adobe Animate version 21.0.2.37893 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="M Cassete idle0000" x="4102" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0001" x="4102" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0002" x="4688" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0003" x="5274" y="0" width="586" height="753"/>
+	<SubTexture name="cM Cassete idle0004" x="5860" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0005" x="5860" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0006" x="6446" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0007" x="6446" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0008" x="7032" y="0" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0009" x="0" y="753" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0010" x="586" y="753" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0011" x="586" y="753" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0012" x="1172" y="753" width="586" height="753"/>
+	<SubTexture name="M Cassete idle0013" x="1172" y="753" width="586" height="753"/>
+</TextureAtlas>
