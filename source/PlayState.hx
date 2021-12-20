@@ -320,6 +320,20 @@ class PlayState extends MusicBeatState
 		trace('stage is: ' + curStage);
 		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
 			switch (songName)
+			
+			GameOverSubstate.resetVariables();
+		var songName:String = Paths.formatToSongPath(SONG.song);
+		curStage = PlayState.SONG.stage;
+		trace('stage is: ' + curStage);
+		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
+			switch (songName)
+			
+			GameOverSubstate.resetVariables();
+		var songName:String = Paths.formatToSongPath(SONG.song);
+		curStage = PlayState.SONG.stage;
+		trace('stage is: ' + curStage);
+		if(PlayState.SONG.stage == null || PlayState.SONG.stage.length < 1) {
+			switch (songName)
 			{
 				case 'spookeez' | 'south' | 'monster':
 					curStage = 'spooky';
@@ -376,6 +390,7 @@ class PlayState extends MusicBeatState
 				stageFront.setGraphicSize(Std.int(stageFront.width * 1.1));
 				stageFront.updateHitbox();
 				add(stageFront);
+			
 
 				if(!ClientPrefs.lowQuality) {
 					var stageLight:BGSprite = new BGSprite('stage_light', -125, -100, 0.9, 0.9);
@@ -393,7 +408,27 @@ class PlayState extends MusicBeatState
 					stageCurtains.updateHitbox();
 					add(stageCurtains);
 				}
-
+               
+            case 'template': //Week 1
+				var bg:BGSprite = new BGSprite('template', -600, -200, 0.9, 0.9);
+				add(bg);
+			
+			case 'template1': //Week 1
+				var bg:BGSprite = new BGSprite('template1', -600, -200, 0.9, 0.9);
+				add(bg);
+			
+			case 'template2': //Week 1
+				var bg:BGSprite = new BGSprite('template2', -600, -200, 0.9, 0.9);
+				add(bg);
+			
+			case 'template3': //Week 1
+				var bg:BGSprite = new BGSprite('template3', -600, -200, 0.9, 0.9);
+				add(bg);
+			
+			case 'template4': //Week 1
+				var bg:BGSprite = new BGSprite('template4', -600, -200, 0.9, 0.9);
+				add(bg);
+				
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -447,61 +482,7 @@ class PlayState extends MusicBeatState
 				FlxG.sound.list.add(trainSound);
 
 				var street:BGSprite = new BGSprite('philly/street', -40, 50);
-
 				add(street);
-				case 'cgstage':
-				CoolUtil.precacheSound('tapestuff');
-				CoolUtil.precacheSound('rewind');
-				CoolUtil.precacheSound('dah');
-				CoolUtil.precacheSound('city');
-				bganim = new FlxSprite();
-				bganim.screenCenter();
-				bganim.scale.set(1.25,1.25);
-				bganim.frames = Paths.getSparrowAtlas('weekcg/CGBG');
-				bganim.animation.addByPrefix('idle', 'new', 24,false);
-				bganim.antialiasing = true;
-				bganim.x -= 1250;
-				bganim.y -= 980;
-				add(bganim);
-
-				coolboppers = new FlxSprite();
-				coolboppers.scale.set(1.3,1.3);
-				coolboppers.screenCenter();
-				switch (songName)
-				{
-					case 'soda-groove':
-						coolboppers.frames = Paths.getSparrowAtlas('weekcg/crowd-free');
-						coolboppers.animation.addByPrefix('idle', 'crowd-van', 24, false);
-						coolboppers.scale.set(1.45,1.45);
-						coolboppers.x -= -10;
-						coolboppers.y += 40;
-					default:
-						coolboppers.frames = Paths.getSparrowAtlas('weekcg/bopper1');
-						coolboppers.animation.addByPrefix('idle', 'crowd1', 24, false);
-				}
-				coolboppers.x -= 650;
-				coolboppers.y -= 80;
-				
-
-				coolboppers2 = new FlxSprite();
-				coolboppers2.scale.set(1.3,1.3);
-				coolboppers2.screenCenter();
-				coolboppers2.antialiasing = true;
-				coolboppers.antialiasing = true;
-				switch (songName)
-				{
-					case 'soda-groove':
-						coolboppers2.frames = Paths.getSparrowAtlas('weekcg/crowd-free2');
-						coolboppers2.animation.addByPrefix('idle', 'crowd-van', 24, false);
-						coolboppers2.scale.set(1.45,1.45);
-						coolboppers2.x += 60;
-						coolboppers2.y += 80;
-					default:
-						coolboppers2.frames = Paths.getSparrowAtlas('weekcg/bopper2');
-						coolboppers2.animation.addByPrefix('idle', 'crowd1', 24, false);
-				}
-				coolboppers2.x -= 700;
-				coolboppers2.y -= 110;
 
 			case 'limo': //Week 4
 				var skyBG:BGSprite = new BGSprite('limo/limoSunset', -120, -50, 0.1, 0.1);
@@ -954,13 +935,6 @@ class PlayState extends MusicBeatState
 		iconP2.visible = !ClientPrefs.hideHud;
 		add(iconP2);
 		reloadHealthBarColors();
-        
-		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
-		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		scoreTxt.scrollFactor.set();
-		scoreTxt.borderSize = 1.25;
-		scoreTxt.visible = !ClientPrefs.hideHud;
-		add(scoreTxt);
 		
 		var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by Kauã"), 24);
         creditTxt.scrollFactor.set();
@@ -969,6 +943,21 @@ class PlayState extends MusicBeatState
         creditTxt.borderSize = 3;
         creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
         add(creditTxt);
+        
+        var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by (Kauãシ) "), 24);
+        creditTxt.scrollFactor.set();
+        creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        creditTxt.borderColor = FlxColor.BLACK;
+        creditTxt.borderSize = 3;
+        creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
+        add(creditTxt);
+        
+		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
+		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		scoreTxt.scrollFactor.set();
+		scoreTxt.borderSize = 1.25;
+		scoreTxt.visible = !ClientPrefs.hideHud;
+		add(scoreTxt);
 
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -2345,11 +2334,12 @@ class PlayState extends MusicBeatState
 						{
 							case 0:
 								animToPlay = 'singLEFT';
+								health:-- 0.02;
 							case 1:
 								animToPlay = 'singDOWN';
-							case 2:
+							case 2:health:-- 0.02;
 								animToPlay = 'singUP';
-							case 3:
+							case 3:health:-- 0.02;
 								animToPlay = 'singRIGHT';
 						}
 						if(daNote.noteType == 'GF Sing') {
