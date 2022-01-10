@@ -106,7 +106,7 @@ class FlxVirtualPad extends FlxSpriteGroup
 
 		dPad = null;
 		actions = null;
-		buttonA = true;
+		buttonA = null;
 		buttonB = null;
 		buttonC = null;
 		buttonY = null;
